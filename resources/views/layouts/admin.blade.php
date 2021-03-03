@@ -23,7 +23,7 @@
 
     <!-- Core JS files -->
     <script src="{{ asset('public/backend/js/main/jquery.min.js')}}"></script>
-    <script src="{{ asset('public/backend/js/main/bootstrap.bundle.min.js')}}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="{{ asset('public/backend/js/plugins/loaders/blockui.min.js')}}"></script>
     <!-- /core JS files -->
 
@@ -60,6 +60,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- Date-Time Picker -->
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" integrity="sha256-b5ZKCi55IX+24Jqn638cP/q3Nb2nlx+MH/vMMqrId6k=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha256-5YmaxAwMjIpMrVlK84Y/+NjCpKnFYa8bWWBbUHSBGfU=" crossorigin="anonymous"></script-->
+        <script src="{{asset('public/backend/js/plugins/uploaders/fileinput/fileinput.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{asset('public/backend/css/jquery.datetimepicker.css')}}"/ >
+        
+        <script src="{{asset('public/backend/js/jquery.js')}}"></script>
+        <script src="{{asset('public/backend/js/jquery.datetimepicker.full.min.js')}}"></script>
+
+
 
 </head>
 

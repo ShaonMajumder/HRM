@@ -2,9 +2,11 @@
 User Id - FK
 Clock in time 
 Clock out time
+
 Attendance date
 month
 year
 
-php artisan make:model attendance --migration
+php artisan make:model Attendance --migration
 php artisan make:controller Admin/AttendanceController
+npm install jquery-datetimepicker

@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('content')
+	
         <!-- Page header -->
         <div class="page-header page-header-light">
             <div class="page-header-content header-elements-md-inline">
@@ -31,7 +32,7 @@
 					</div>
 					
 					<div class="card-body">
-                	<form class="form" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
+                	<form class="form" action="{{ route('attendance.store') }}" method="post" enctype="multipart/form-data">
                 		@csrf
 						<strong class="text-center text-success"> <span class="icon-user"></span> Attendance Information</strong><hr>
 							<div class="row">
@@ -74,11 +75,72 @@
 										@enderror
 									</div>
 								</div>
+							</div>
 							
-							
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>In Time: <strong class="text-danger">*</strong></label>
+										<input type="text" name="in_time" id="in_time" class="form-control datetimepicker @error('in_time') is-invalid @enderror" value="{{ old('in_time') }}"  required="" readonly="true">
+										@error('in_time')
+										<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+										@enderror
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>Out Time: <strong class="text-danger">*</strong></label>
+										<input type="text" name="out_time" id="out_time" class="form-control datetimepicker @error('out_time') is-invalid @enderror" value="{{ old('out_time') }}"  required="" readonly="true">
+										@error('out_time')
+										<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+										@enderror
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>Period: <strong class="text-danger">*</strong></label>
+										<input type="text" name="period" id="period" class="form-control @error('period') is-invalid @enderror" value=""  required="" readonly="true">
+										@error('period')
+										<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+										@enderror
+									</div>
+								</div>
+							</div>
 
-							
+								
+								
+								
+												
+							  
+							  <script type="text/javascript">
+								$(function () {
+									$('.datetimepicker').datetimepicker();
+								});
 
+								/*
+
+								$( "#period" ).click(function() {
+									//start_time = $('#in_time').val();
+									//stop_time  = $('#out_time').val();
+
+									var start_time = $('#in_time').data('timepicker');
+  									var stop_time = $('#out_time').data('timepicker');
+									  
+
+									alert(start_time.hour);
+									period_time = moment(stop_time).format() - moment(start_time).format();
+									//alert(period_time);
+									
+									$('#period').val(period_time);
+								});
+								*/
+							</script>
 							
 							
 							
@@ -105,5 +167,12 @@
 $("#imgInp").change(function() {
   readURL(this);
 });
+
+
+$( function() {
+	$( "#datetimepicker" ).datetimepicker();
+} );
+
+
 </script>
 @endsection

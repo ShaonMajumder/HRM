@@ -38,9 +38,19 @@ class AttendanceController extends Controller
         //return view('admin.attendance.create',compact('user_id'));
     }
 
-    public function time_track($user_id){
-        
-#        $clock_in = , $clock_out
-        
+    //store employee 
+    public function store(Request $request)
+    {   
+        $attendance = Attendance::create([
+            "user_id" => $request->input('user_id'),
+            "date" => $request->input('date'),
+            "month"=> $request->input('month'),
+            "year" => $request->input('year'),
+            "in_time" => $request->input('in_time'),
+            "out_time" => $request->input('out_time'),
+        ]);
+        return redirect()->back()->with('success', 'Attendance was successfully added!');
+
+
     }
 }

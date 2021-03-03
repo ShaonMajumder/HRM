@@ -16,9 +16,9 @@ class CreateAttendancesTable extends Migration
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
-            $table->string('clock_in_time');
-            $table->string('clock_out_time');
-            $table->string('attendance_date');
+            $table->string('in_time');
+            $table->string('out_time');
+            $table->string('date');
             $table->string('month');
             $table->string('year');
             //foreign('user_id')->references('id')->on('users')->onDelete('cascade');
